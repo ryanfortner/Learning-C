@@ -1,7 +1,7 @@
 /* 
  * hello2.c
  * my first C program with comments!
- * by @chunky-milk (GitHub)
+ * by @ryanfortner (GitHub)
  * on August 10, 2021
  */
 
