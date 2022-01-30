@@ -1,11 +1,13 @@
 /*******
-This code is by @Itai-Nelken.
+This code was written with assistance from @Itai-Nelken.
 It's a super simple calculator written in the C programming language.
 *******/
 
 #include <stdio.h>
 #include <stdlib.h>
 #define PROGEXECNAME "./very-simple-calculator"
+
+// the #define part isn't anything necessary,  its called a 'macro' and is like a variable but can be passed between C files
 
 void help() {
     printf("\e[1mUsage:\e[0m %s [num1] [operation] [num2]\n", PROGEXECNAME);
