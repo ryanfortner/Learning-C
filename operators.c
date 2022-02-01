@@ -41,4 +41,10 @@ int main(void) {
     int age = 37;
     printf("%ld\n", sizeof(age));
     printf("%ld\n", sizeof(int));
+
+    // operator precedence
+    a = 2, b = 4;
+    c = b + a * a / b - a;
+
+    //
 }

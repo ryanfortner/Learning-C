@@ -5,13 +5,14 @@ It's a super simple calculator written in the C programming language.
 
 #include <stdio.h>
 #include <stdlib.h>
-#define PROGEXECNAME "./very-simple-calculator"
+#define NAME "c-alculator"
 
 // the #define part isn't anything necessary,  its called a 'macro' and is like a variable but can be passed between C files
 
-void help() {
-    printf("\e[1mUsage:\e[0m %s [num1] [operation] [num2]\n", PROGEXECNAME);
-    printf("\e[1mSupported operations:\e[0m +, -, x, /.  x=*\n");
+void help(char *argv0) {
+	printf("\e[1m%s version %s built on %s.\e[0m\n", NAME, VER, __TIMESTAMP__);
+	printf("Usage: %s [num1] [operation] [num2]\n", argv0);
+	printf("Operations: +, -, x, /\n");
 }
 
 int main(int argc, char **argv) {
