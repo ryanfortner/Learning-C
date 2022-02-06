@@ -1,7 +1,7 @@
 /***
 quadratic-solver.c
 simple quadratic equation solver
-in the form of ax^2+bx+c
+for quadratic equations in the form of ax^2+bx+c
 ***/
 
 #include <stdio.h>
