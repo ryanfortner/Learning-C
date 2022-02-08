@@ -4,8 +4,8 @@ program for getting different quadratic & quadratic solution forms
 ***/
 
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 
 #define VER "0.1"
@@ -24,13 +24,23 @@ int main(int argc, char **argv) {
             printHelpDialog(argv[1]);
             break;
         } else if (!strcmp(argv[1],"roots")) {
-            getRoots(**argv);
-            break;
+            if (argc != 5) {
+                fprintf(stderr, "Error: operation %s received, but no options provided!\nExecute '%s --help' to list all options.\n", argv[1], argv[0]);
+                break;
+            } else {
+                getRoots(argv);
+                break;
+            }
         } else if (!strcmp(argv[1], "factoredform")) {
-            getFactoredForm(**argv);
-            break;
+            if (argc != 5) {
+                fprintf(stderr, "Error: operation %s received, but no options provided!\nExecute '%s --help' to list all options.\n", argv[1], argv[0]);
+                break;
+            } else {
+                getFactoredForm(argv);
+                break;
+            }
         } else {
-            printf("Error: operation not supported.\n");
+            fprintf(stderr, "Error: operation not supported.\n");
         }
     }
     // break brings us back to here
@@ -52,9 +62,9 @@ void printHelpDialog(char *argv0) {
 }
 
 float getFactoredForm(char **argv) {
-    float a=atof(argv[2]);
-    float b=atof(argv[3]);
-    float c=atof(argv[4]);
+    float a=strtod(argv[2], NULL);
+    float b=strtod(argv[3], NULL);
+    float c=strtod(argv[4], NULL);
     float d;
 
     printf("ok, I got 'a = %f', 'b = %f', 'c = %f'. continuing.\n", a, b, c);
@@ -82,9 +92,9 @@ float getFactoredForm(char **argv) {
 }
 
 float getRoots(char **argv) {        
-    float a=atof(argv[2]);
-    float b=atof(argv[3]);
-    float c=atof(argv[4]);
+    float a=strtod(argv[2], NULL);
+    float b=strtod(argv[3], NULL);
+    float c=strtod(argv[4], NULL);
     float d;
 
     printf("ok, I got 'a = %f', 'b = %f', 'c = %f'. continuing.\n", a, b, c);
