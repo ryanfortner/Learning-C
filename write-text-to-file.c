@@ -1,13 +1,13 @@
 /***
-write-num-to-file.c
-writing num to a file in c
+write-text-to-file.c
+writing text to a file in c
 ***/
 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(void) {
-    int num;
+    char text[100];
     FILE *fptr;
 
     // use appropriate location if you're using macos, linux, windows, etc
@@ -18,10 +18,10 @@ int main(void) {
         exit(1);
     }
 
-    printf("Enter num: ");
-    scanf("%d", num);
+    printf("Enter text: ");
+    scanf("%s", &text);
 
-    fprintf(fptr, "%d", num);
+    fprintf(fptr, "%s", text);
     fclose(fptr);
 
     return 0;

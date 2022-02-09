@@ -2,19 +2,19 @@
 #include <stdlib.h>
 
 int main(void) {
-    int num;
+    char text[100];
     FILE *fptr;
 
     if ((fptr = fopen("program.txt", "r")) == NULL) {
-        printf("Error opening file!");
+        printf("Error opening file!\n");
         
         // Program exits if the file pointer returns null.
         exit(1);
     }
 
-    fscanf(fptr, "%d", &num);
+    fscanf(fptr, "%s", &text);
 
-    printf("Value of n = %d", num);
+    printf("Contents = %s", text);
     fclose(fptr);
 
     return 0;
