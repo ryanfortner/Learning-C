@@ -22,7 +22,6 @@ int main(void) {
 int listNumbers(int x, int y) {
     int i, n;
     for(i=x; i<=y; i++) {
-        printf("%d ", i);
+        printf("%d\n", i);
     }
-    printf("\n");
 }
