@@ -10,14 +10,7 @@ const char* nameOctagon = "octagon";
 const char* nameCircle = "circle";
 const char* nameUnknown = "unknown";
 
-enum shape {triangle, 
-square, 
-rectangle, 
-trapezoid, 
-pentagon, 
-hexagon, 
-octagon, 
-circle};
+enum shape {triangle, square, rectangle, trapezoid, pentagon, hexagon, octagon, circle};
 
 void printShapeInfo(enum shape aShape);
 const char* getShapeName(enum shape aShape);
